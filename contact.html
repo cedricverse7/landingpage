@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sillage, un modèle de site pour une marque de savon.">
+    <title>Contact — Sillage</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+    <header class="entete">
+        <div class="conteneur barre-navigation">
+            <a class="logo" href="index.html" aria-label="Sillage, accueil">sillage.</a>
+
+            <nav class="navigation" aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="produit.html">Produit</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+                <a href="a-propos.html">À propos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenu" class="conteneur">
+        <section class="page-texte">
+            <p class="surtitre">Écrivez-nous</p>
+            <h1>Gardons <em>le contact.</em></h1>
+            <p class="description">
+                Une question sur notre savon ou envie d’en savoir plus sur Sillage ?
+                Contactez-nous, nous serons ravi de vous aider !
+            </p>
+
+            <div class="carte-contact">
+                <h2>Par e-mail</h2>
+
+                <a class="lien-contact" href="mailto:bonjour@example.com">bonjour@exemple.com</a>
+                <p class="precision"> Nous vous répondrons du lundi au vendredi dans un délai de 24h</p>
+            </div>
+
+            <div class="carte-contact">
+                <h2>Par téléphone</h2>
+                <a class="lien-contact" href="tel:+33123456789">01 23 45 67 89</a>
+                <p class="precision">Du lundi au vendredi, de 9h à 18h.</p>
+            </div>
+
+            <section class="bloc-carte" aria-labelledby="titre-carte">
+                <div>
+                    <p class="surtitre">Nous trouver</p>
+                    <h2 id="titre-carte">Notre atelier à Paris</h2>
+                    <p class="precision">12 rue du Savon, 75011 Paris</p>
+                </div>
+                <iframe
+                    class="carte-google"
+                    title="Plan d’accès à l’atelier Sillage à Paris"
+                    src="https://www.google.com/maps?q=12+rue+du+Savon,+75011+Paris&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+
+            <a class="lien-texte" href="produit.html">Revenir à notre savon</a>
+        </section>
+    </main>
+
+ 
+    <footer class="pied-page conteneur">
+        <a class="logo" href="index.html">sillage.</a>
+        <p>L'essentiel est fait de bonnes odeurs</p>
+        <small>Marque fictive · Site de démonstration</small>
+    </footer>
+</body>
+</html>

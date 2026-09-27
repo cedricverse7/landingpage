@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sillage, un modèle de site pour une marque de savon.">
+    <title>Le savon — Sillage</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+    <header class="entete">
+        <div class="conteneur barre-navigation">
+            <a class="logo" href="index.html" aria-label="Sillage, accueil">sillage.</a>
+
+            <nav class="navigation" aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="produit.html" aria-current="page">Produit</a>
+                <a href="contact.html">Contact</a>
+                <a href="a-propos.html">À propos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenu" class="conteneur">
+        <p class="fil-ariane">
+            <a href="index.html">Accueil</a>
+            <span aria-hidden="true">/</span>
+            Le savon
+        </p>
+
+        <section class="produit" aria-labelledby="titre-produit">
+            <figure class="visuel-produit">
+                <img
+                    src="images/savon.png"
+                    alt="Emplacement prévu pour la photo du savon"
+                    width="1000"
+                    height="1100"
+                    class="photo-produit"
+                >
+                <figcaption>Le savon Sillage · Collection quotidienne</figcaption>
+            </figure>
+
+            <div class="presentation-produit">
+                <p class="surtitre">Le plaisir des choses simples</p>
+                <h1 id="titre-produit">Très vite,<br><em> On ne peut plus s'en passer .</em></h1>
+                <p class="description">
+                    Odeurs naturelles, sensible aux peaux sensibles, durable et économique :
+                </p>
+
+                <div class="identite-produit">
+                    <h2>L’Essentiel</h2>
+                    <span>Format solide · 100 g</span>
+                </div>
+                <p class="prix">6,90 € <small>TTC</small></p>
+
+                <a class="bouton" href="contact.html"> J'en veux un !</a>
+                <p class="precision"></p>
+
+                <div class="informations-produit">
+                    <details open>
+                        <summary>Le savon au quotidien</summary>
+                        <p>
+                            Exemple
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Composition</summary>
+                        <p> Exemple </p>
+                    </details>
+                    <details>
+                        <summary>Disponibilités</summary>
+                        <p>
+                            Exemple
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="points-cles" aria-label="L’esprit du produit">
+            <div>
+                <span class="numero">01</span>
+                <h2>Durable</h2>
+                <p> Peut être utilisé quotidiennement pendant 1 mois </p>
+            </div>
+            <div>
+                <span class="numero">02</span>
+                <h2> Éfficace</h2>
+                <p> Élimine 99,9% des bactéries </p>
+            </div>
+            <div>
+                <span class="numero">03</span>
+                <h2> Familial </h2>
+                <p> Concocteurs de bonnes odeurs depuis 1996 </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pied-page conteneur">
+        <a class="logo" href="index.html">sillage.</a>
+        <p>L'essentiel est fait de bonnes odeurs</p>
+        <small>Marque fictive · Site de démonstration</small>
+    </footer>
+</body>
+</html>

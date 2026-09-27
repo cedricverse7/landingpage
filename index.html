@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sillage, un modèle de site pour une marque de savon.">
+    <title>Accueil — Sillage</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+    <header class="entete">
+        <div class="conteneur barre-navigation">
+            <a class="logo" href="index.html" aria-label="Sillage, accueil">sillage.</a>
+
+            <nav class="navigation" aria-label="Navigation principale">
+                <a href="index.html" aria-current="page">Accueil</a>
+                <a href="produit.html">Produit</a>
+                <a href="contact.html">Contact</a>
+                <a href="a-propos.html">À propos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenu" class="conteneur">
+        <section class="accueil">
+            <div class="texte-accueil">
+                <p class="surtitre">Sillage · Le savon du quotidien</p>
+                <h1>Notre savon<br>est <em>100% français !</em></h1>
+                <p class="description">
+                    Le savon artisanal Sillage est sans huile de palme,
+                    sans colorants synthétiques et sans alcool
+                </p>
+                <a class="bouton" href="produit.html">Découvrir le produit</a>
+            </div>
+
+            <figure class="visuel-produit">
+                <img
+                    src="images/savon.png"
+                    alt="Emplacement prévu pour la photo du savon"
+                    width="1000"
+                    height="1100"
+                    class="photo-produit"
+                >
+                <figcaption> L'essentiel est fait de bonnes odeurs </figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer class="pied-page conteneur">
+        <a class="logo" href="index.html">sillage.</a>
+        <p>L'essentiel est fait de bonnes odeurs</p>
+        <small>Marque fictive · Site de démonstration</small>
+    </footer>
+</body>
+</html>

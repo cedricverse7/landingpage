@@ -1,0 +1,453 @@
+
+:root {
+    --couleur-fond: #fcfaf5;
+    --couleur-texte: #243a30;
+    --couleur-secondaire: #5e6a61;
+    --couleur-accent: #984322;
+    --couleur-accent-survol: #743117;
+    --couleur-bordure: #d9ded3;
+    --couleur-surface: #edf0e7;
+    --largeur-contenu: 1200px;
+    --police-texte: Arial, Helvetica, sans-serif;
+    --police-titre: Georgia, "Times New Roman", serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    font-family: var(--police-texte);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.conteneur {
+    width: min(var(--largeur-contenu), 90%);
+    margin-inline: auto;
+}
+
+h1,
+h2,
+p,
+figure {
+    margin-top: 0;
+}
+
+h1,
+h2 {
+    font-family: var(--police-titre);
+    font-weight: normal;
+}
+
+h1 {
+    margin-bottom: 24px;
+    font-size: clamp(2.75rem, 4.8vw, 4.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+h1 em {
+    color: var(--couleur-accent);
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.surtitre {
+    margin-bottom: 22px;
+    color: var(--couleur-accent);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.description {
+    max-width: 520px;
+    color: var(--couleur-secondaire);
+    font-size: 1.0625rem;
+}
+
+.precision {
+    margin-top: 12px;
+    color: var(--couleur-secondaire);
+    font-size: 0.8125rem;
+}
+
+a:focus-visible,
+summary:focus-visible {
+    outline: 3px solid var(--couleur-accent);
+    outline-offset: 5px;
+}
+
+.lien-evitement {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+    padding: 10px 18px;
+    background-color: var(--couleur-texte);
+    color: white;
+    transform: translateY(-200%);
+}
+
+.lien-evitement:focus {
+    transform: translateY(0);
+}
+
+.entete {
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.barre-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 100px;
+    padding-block: 18px;
+}
+
+.logo {
+    font-family: var(--police-titre);
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: -0.07em;
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+}
+
+.navigation a {
+    padding-block: 7px;
+    border-bottom: 1px solid transparent;
+    font-size: 0.9375rem;
+    text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a[aria-current="page"] {
+    border-bottom-color: var(--couleur-accent);
+    color: var(--couleur-accent);
+}
+
+.bouton {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid var(--couleur-accent);
+    border-radius: 3px;
+    background-color: var(--couleur-accent);
+    color: white;
+    font-size: 0.9375rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.bouton:hover {
+    background-color: var(--couleur-accent-survol);
+}
+
+.lien-texte {
+    text-underline-offset: 5px;
+}
+
+.fil-ariane {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-block: 28px 36px;
+    color: var(--couleur-secondaire);
+    font-size: 0.8125rem;
+}
+
+.fil-ariane a {
+    text-decoration: none;
+}
+
+.produit {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    align-items: start;
+    gap: 70px;
+}
+
+.produit > *,
+.accueil > *,
+.a-propos > * {
+    min-width: 0;
+}
+
+.visuel-produit {
+    width: 100%;
+    aspect-ratio: 10 / 11;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 180px 180px 4px 4px;
+}
+
+.photo-produit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visuel-produit figcaption {
+    margin-top: 16px;
+    color: var(--couleur-secondaire);
+    font-size: 0.8125rem;
+    text-align: center;
+}
+
+.presentation-produit {
+    padding-top: 18px;
+}
+
+.identite-produit {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid var(--couleur-bordure);
+}
+
+.identite-produit h2 {
+    margin-bottom: 0;
+}
+
+.identite-produit span {
+    color: var(--couleur-secondaire);
+    font-size: 0.875rem;
+}
+
+.prix {
+    margin-block: 12px 20px;
+    font-size: 1.8rem;
+}
+
+.prix small {
+    margin-left: 10px;
+    color: var(--couleur-secondaire);
+    font-size: 0.8125rem;
+}
+
+.informations-produit {
+    margin-top: 30px;
+}
+
+details {
+    padding-block: 15px;
+    border-top: 1px solid var(--couleur-bordure);
+}
+
+summary {
+    cursor: pointer;
+    font-size: 0.9375rem;
+    font-weight: bold;
+}
+
+details p {
+    margin-block: 14px 0;
+    color: var(--couleur-secondaire);
+    font-size: 0.9375rem;
+}
+
+.points-cles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-block: 65px;
+    padding-block: 32px;
+    border-top: 1px solid var(--couleur-bordure);
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.numero {
+    color: var(--couleur-accent);
+    font-size: 0.8125rem;
+}
+
+.points-cles h2 {
+    margin-block: 12px 8px;
+    font-size: 1.45rem;
+}
+
+.points-cles p {
+    margin-bottom: 0;
+    color: var(--couleur-secondaire);
+    font-size: 0.9375rem;
+}
+
+.accueil,
+.a-propos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    padding-block: 60px 80px;
+}
+
+.texte-accueil .bouton,
+.a-propos .bouton {
+    margin-top: 18px;
+}
+
+.page-texte {
+    max-width: 820px;
+    min-height: 65vh;
+    padding-block: 70px;
+}
+
+.carte-contact {
+    margin-block: 30px;
+    padding: 30px;
+    border: 1px solid var(--couleur-bordure);
+    background-color: var(--couleur-surface);
+}
+
+.carte-contact h2 {
+    margin-bottom: 12px;
+}
+
+.lien-contact {
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    overflow-wrap: anywhere;
+    text-underline-offset: 5px;
+}
+
+.bloc-carte {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+    gap: 30px;
+    align-items: start;
+    margin-block: 30px;
+}
+
+.bloc-carte .surtitre {
+    margin-bottom: 10px;
+}
+
+.bloc-carte h2 {
+    margin-bottom: 10px;
+}
+
+.carte-google {
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid var(--couleur-bordure);
+}
+
+.pied-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 30px;
+    padding-block: 26px;
+    border-top: 1px solid var(--couleur-bordure);
+}
+
+.pied-page .logo {
+    font-size: 1.8rem;
+}
+
+.pied-page p,
+.pied-page small {
+    margin: 0;
+    color: var(--couleur-secondaire);
+    font-size: 0.8125rem;
+}
+
+@media (max-width: 900px) {
+    .produit,
+    .accueil,
+    .a-propos {
+        gap: 32px;
+    }
+
+    .navigation {
+        gap: 22px;
+    }
+
+    .points-cles {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 650px) {
+    .barre-navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation {
+        justify-content: center;
+        gap: 12px 22px;
+    }
+
+    .navigation a {
+        font-size: 0.875rem;
+    }
+
+    .produit,
+    .accueil,
+    .a-propos,
+    .bloc-carte {
+        grid-template-columns: 1fr;
+    }
+
+    .presentation-produit {
+        padding-top: 0;
+    }
+
+    .photo-produit {
+        max-height: 470px;
+        border-radius: 120px 120px 4px 4px;
+    }
+
+    .points-cles {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-block: 40px;
+    }
+
+    .accueil,
+    .a-propos,
+    .page-texte {
+        padding-block: 38px 50px;
+    }
+
+    .pied-page {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bouton {
+        transition: none;
+    }
+}
